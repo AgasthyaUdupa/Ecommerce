@@ -7,10 +7,12 @@ interface SearchPageProps{
     searchParams :{ query : string}
 }
 
-export function generateMetaData({searchParams:{query},}:SearchPageProps):Metadata{
-  return{
-    title:`Search:${query}- Aguzon`
-  }
+export function generateMetadata({
+  searchParams: { query },
+}: SearchPageProps): Metadata {
+  return {
+    title: `Search: ${query} - Aguzon`,
+  };
 }
 
 export default async function SearchPage({searchParams :{query}}: SearchPageProps){
