@@ -1,16 +1,17 @@
 import ProductCard from "@/components/ProductCard";
 import { prisma } from "@/lib/db/prisma";
 import { Metadata } from "next";
+// import { title } from "process"
 
 interface SearchPageProps {
   searchParams: { query: string };
 }
 
-export function generateMetadata({
+export function generateMetaData({
   searchParams: { query },
 }: SearchPageProps): Metadata {
   return {
-    title: `Search: ${query} - Aguzon`,
+    title: `Search: ${query}- Aguzon`,
   };
 }
 
